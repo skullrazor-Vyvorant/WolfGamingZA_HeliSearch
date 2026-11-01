@@ -26,7 +26,12 @@ literals in ActionSearchCrashBase.c:
 
 English strings are passed directly to the existing action/notification methods.
 No global localization registration is required. Config.c retains the directory
-correction: create $profile:WolfGamingZA to match the existing JSON path.
+path now uses $profile:WolfGamingZA_HeliSearch/HeliSearch.json and creates
+$profile:WolfGamingZA_HeliSearch. The old directory is not read automatically.
+Before starting this update, copy the existing profiles/WolfGamingZA/HeliSearch.json
+into profiles/WolfGamingZA_HeliSearch/HeliSearch.json to preserve your settings.
+Do not overwrite an existing destination JSON without checking it first.
+Keep the old folder as a backup; do not delete unrelated files from it.
 All other scripts, compiled config.bin, sounds, classes, registrations, probabilities
 and network behavior are unchanged from the supplied original PBO. Original
 credits and WolfGamingZA branding are preserved.
@@ -56,7 +61,7 @@ Use the original uploaded PBO as the base, not either modified build.
    signing machine. The included public .bikey cannot sign it. Never copy the old
    .bisign to a modified PBO. Verify with official BI signature tools.
 4. Test recovery on staging client/server BEFORE publishing. Both must use the
-   same new PBO and new .bisign. Keep the original config JSON and matching key.
+   same new PBO and new .bisign. Use the migrated config JSON in WolfGamingZA_HeliSearch and the matching key.
 5. Verify main menu/pause menu, Expansion join messages, and other mod text first.
    Then test helicopter action and success/failure/already-searched notifications.
 6. Confirm rewards and repeat searches on vanilla and modded CrashBase wrecks.
